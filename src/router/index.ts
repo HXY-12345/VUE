@@ -18,7 +18,11 @@ import Slot from "@/pages/Slot/Father.vue"
 
 // 第二步：创建路由器
 const router = createRouter({
-    history: createWebHistory(),  // 路由器的工作模式
+    // 为GitHub Pages配置base路径
+    history: createWebHistory(
+        import.meta.env.MODE === 'production' ? '/VUE/' : '/'
+    ),
+    // history: createWebHistory(),  // 路由器的工作模式
     routes: [{
         path:'/',
         component: Welcome
