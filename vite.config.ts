@@ -15,4 +15,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  base: '/VUE/',
+  build: {
+    outDir: 'docs'  // 默认为 dist 目录，修改为 docs 目录
+  }
 })
